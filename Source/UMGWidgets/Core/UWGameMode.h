@@ -13,5 +13,10 @@ UCLASS()
 class UMGWIDGETS_API AUWGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
-	
+public:
+
+
+public:
+	UPROPERTY(EditAnywhere)
+	class UUWAttributeNamesAsset* AttributeNamesAsset;
 };

@@ -29,6 +29,9 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	class UAbilitySystemComponent* AbilitySystem;
+	
 protected:
 
 	/** Called for forwards/backward input */

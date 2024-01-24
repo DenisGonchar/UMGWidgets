@@ -4,7 +4,7 @@
 
 #include "AbilitySystemComponent.h"
 #include "AttributeSet.h"
-#include "UWItemsAttributes.generated.h"
+#include "UWAttributeSetType.generated.h"
 
 /**
  * This defines a set of helper functions for accessing and initializing attributes, to avoid having to manually write these functions.
@@ -27,35 +27,14 @@
  */
 
 #define ATTRIBUTE_ACCESSORS(ClassName, PropertyName) \
-	GAMEPLAYATTRIBUTE_PROPERTY_GETTER(ClassName, PropertyName) \
-	GAMEPLAYATTRIBUTE_VALUE_GETTER(PropertyName) \
-	GAMEPLAYATTRIBUTE_VALUE_SETTER(PropertyName) \
-	GAMEPLAYATTRIBUTE_VALUE_INITTER(PropertyName)
-
+GAMEPLAYATTRIBUTE_PROPERTY_GETTER(ClassName, PropertyName) \
+GAMEPLAYATTRIBUTE_VALUE_GETTER(PropertyName) \
+GAMEPLAYATTRIBUTE_VALUE_SETTER(PropertyName) \
+GAMEPLAYATTRIBUTE_VALUE_INITTER(PropertyName)
 
 
 UCLASS()
-class UMGWIDGETS_API UUWItemsAttributeSet : public UAttributeSet
+class UMGWIDGETS_API UUWAttributeSetType : public UObject
 {
 	GENERATED_BODY()
-public:
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	FGameplayAttributeData Health;
-	ATTRIBUTE_ACCESSORS(UUWItemsAttributeSet, Health);
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	FGameplayAttributeData Stamina;
-	ATTRIBUTE_ACCESSORS(UUWItemsAttributeSet, Stamina);
-	
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	FGameplayAttributeData Durability;
-	ATTRIBUTE_ACCESSORS(UUWItemsAttributeSet, Durability);
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	FGameplayAttributeData Attack;
-	ATTRIBUTE_ACCESSORS(UUWItemsAttributeSet, Attack);
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	FGameplayAttributeData Armor;
-	ATTRIBUTE_ACCESSORS(UUWItemsAttributeSet, Armor);
 };
