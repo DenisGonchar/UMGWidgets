@@ -8,7 +8,7 @@ public class UMGWidgets : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "GameplayAbilities" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "GameplayAbilities", "Slate", "SlateCore", "UMG" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
